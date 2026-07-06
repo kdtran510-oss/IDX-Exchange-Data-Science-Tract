@@ -27,9 +27,17 @@ This repository contains weekly work for a housing-price prediction project usin
 - Compared 3- to 48-month rolling windows on April 2026 and selected `X = 36` months.
 - Exported a modeling table with numeric, non-missing features and explicit train/test labels.
 
+**Week 4: Baseline Model**
+
+- Created `03_baseline_model.ipynb`.
+- Trained an ordinary least squares Linear Regression model on the Week 3 cleaned training set.
+- Evaluated on the May 2026 holdout test set.
+- Recorded baseline test R² = 0.300, with MAE about $511,938 and RMSE about $1.40M.
+
 ## Files
 
 - `WEEK1_SETUP_AND_METADATA_NOTES.md`: brief Week 1 setup and metadata notes.
 - `01_exploration.ipynb`: Week 2 pandas exploration notebook.
 - `02_preprocessing.ipynb`: Week 3 preprocessing and time-split notebook.
+- `03_baseline_model.ipynb`: Week 4 Linear Regression baseline notebook.
 - `data/week3_cleaned.csv`: cleaned modeling data (local only; ignored by git).
