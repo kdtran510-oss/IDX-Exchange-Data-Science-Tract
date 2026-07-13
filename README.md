@@ -34,10 +34,21 @@ This repository contains weekly work for a housing-price prediction project usin
 - Evaluated on the May 2026 holdout test set.
 - Recorded baseline test R² = 0.300, with MAE about $511,938 and RMSE about $1.40M.
 
+**Week 5: Additional Models**
+
+- Created `04_model_comparison.ipynb`.
+- Installed and used `scikit-learn` for Decision Tree and Random Forest regressors.
+- Used a 30-month training window from November 2023 through April 2026, with May 2026 held out for testing.
+- Removed implausible/extreme target values using a $50K lower bound and the training-set 99.5th percentile upper bound.
+- Added training-only smoothed city/ZIP target encodings.
+- Compared test R²: Linear Regression = 0.736, Decision Tree = 0.735, Random Forest = 0.838.
+- Documented that Random Forest performed best, while the single Decision Tree was more brittle on R².
+
 ## Files
 
 - `WEEK1_SETUP_AND_METADATA_NOTES.md`: brief Week 1 setup and metadata notes.
 - `01_exploration.ipynb`: Week 2 pandas exploration notebook.
 - `02_preprocessing.ipynb`: Week 3 preprocessing and time-split notebook.
 - `03_baseline_model.ipynb`: Week 4 Linear Regression baseline notebook.
+- `04_model_comparison.ipynb`: Week 5 Decision Tree and Random Forest comparison notebook.
 - `data/week3_cleaned.csv`: cleaned modeling data (local only; ignored by git).
