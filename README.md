@@ -44,11 +44,21 @@ This repository contains weekly work for a housing-price prediction project usin
 - Compared test R²: Linear Regression = 0.736, Decision Tree = 0.735, Random Forest = 0.838.
 - Documented that Random Forest performed best, while the single Decision Tree was more brittle on R².
 
+**Week 6: Feature Engineering**
+
+- Updated `04_model_comparison.ipynb` with property age, bed/bath ratio, living-area ratios, and lot-utilization features.
+- Spatially joined valid property coordinates to the California School District Areas 2024-25 layer using GeoPandas.
+- Kept unified, elementary, and high-school districts separate and added public enrollment, socioeconomic-disadvantage, area, match, and missingness features.
+- Kept the same 30-month training window and May 2026 test month for a fair old-vs-new comparison.
+- Improved test R² with the new features: Linear Regression 0.736 → 0.745, Decision Tree 0.735 → 0.744, and Random Forest 0.838 → 0.851.
+- Excluded district identity target encodings after an ablation check showed that they destabilized the tree-model holdout results.
+
 ## Files
 
 - `WEEK1_SETUP_AND_METADATA_NOTES.md`: brief Week 1 setup and metadata notes.
 - `01_exploration.ipynb`: Week 2 pandas exploration notebook.
 - `02_preprocessing.ipynb`: Week 3 preprocessing and time-split notebook.
 - `03_baseline_model.ipynb`: Week 4 Linear Regression baseline notebook.
-- `04_model_comparison.ipynb`: Week 5 Decision Tree and Random Forest comparison notebook.
+- `04_model_comparison.ipynb`: Week 5–6 model comparison and feature-engineering notebook.
 - `data/week3_cleaned.csv`: cleaned modeling data (local only; ignored by git).
+- `data/ca_school_district_areas_2024_25.geojson`: downloaded school-district boundaries (local only; ignored by git).
