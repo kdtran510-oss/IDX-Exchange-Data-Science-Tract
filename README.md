@@ -49,8 +49,8 @@ This repository contains weekly work for a housing-price prediction project usin
 - Updated `04_model_comparison.ipynb` with property age, bed/bath ratio, living-area ratios, and lot-utilization features.
 - Spatially joined valid property coordinates to the California School District Areas 2024-25 layer using GeoPandas.
 - Kept unified, elementary, and high-school districts separate and added public enrollment, socioeconomic-disadvantage, area, match, and missingness features.
-- Kept the same 30-month training window and May 2026 test month for a fair old-vs-new comparison.
-- Improved test R² with the new features: Linear Regression 0.736 → 0.745, Decision Tree 0.735 → 0.744, and Random Forest 0.838 → 0.851.
+- Shifted the 30-month training window to December 2023 through May 2026, with June 2026 held out for testing.
+- Improved June 2026 test R² with the new features: Linear Regression 0.733 → 0.744, Decision Tree 0.738 → 0.741, and Random Forest 0.836 → 0.854.
 - Excluded district identity target encodings after an ablation check showed that they destabilized the tree-model holdout results.
 
 ## Files
