@@ -53,6 +53,15 @@ This repository contains weekly work for a housing-price prediction project usin
 - Improved June 2026 test R² with the new features: Linear Regression 0.733 → 0.744, Decision Tree 0.738 → 0.741, and Random Forest 0.836 → 0.854.
 - Excluded district identity target encodings after an ablation check showed that they destabilized the tree-model holdout results.
 
+**Week 7: Advanced Models**
+
+- Created `05_advanced_models.ipynb` and installed CatBoost for efficient gradient-boosted tree training.
+- Used May 2026 as an internal validation month and kept June 2026 untouched for final testing.
+- Lightly tuned depth, learning rate, and estimator count across four candidates with early stopping.
+- Selected depth 4, learning rate 0.05, and 540 estimators, then refit on December 2023 through May 2026.
+- Recorded June 2026 test metrics: R² = 0.849, MAE = $192,516, RMSE = $381,457, and MdAPE = 10.26%.
+- CatBoost was competitive but finished slightly below the Week 6 Random Forest R² of 0.854.
+
 ## Files
 
 - `WEEK1_SETUP_AND_METADATA_NOTES.md`: brief Week 1 setup and metadata notes.
@@ -60,5 +69,6 @@ This repository contains weekly work for a housing-price prediction project usin
 - `02_preprocessing.ipynb`: Week 3 preprocessing and time-split notebook.
 - `03_baseline_model.ipynb`: Week 4 Linear Regression baseline notebook.
 - `04_model_comparison.ipynb`: Week 5–6 model comparison and feature-engineering notebook.
+- `05_advanced_models.ipynb`: Week 7 CatBoost tuning and advanced-model evaluation notebook.
 - `data/week3_cleaned.csv`: cleaned modeling data (local only; ignored by git).
 - `data/ca_school_district_areas_2024_25.geojson`: downloaded school-district boundaries (local only; ignored by git).
