@@ -62,6 +62,15 @@ This repository contains weekly work for a housing-price prediction project usin
 - Recorded June 2026 test metrics: R² = 0.849, MAE = $192,516, RMSE = $381,457, and MdAPE = 10.26%.
 - CatBoost was competitive but finished slightly below the Week 6 Random Forest R² of 0.854.
 
+**Week 8: Evaluation Expansion**
+
+- Created `06_evaluation.ipynb` and `metrics_summary.csv`.
+- Evaluated Linear Regression, Decision Tree, Random Forest, and CatBoost using R², MAE, RMSE, MAPE, MdAPE, 10%/20% accuracy coverage, and signed percentage bias.
+- Compared results across five actual-price bands from $50K–$500K through $5M+.
+- Random Forest performed best overall with R² = 0.854, MAPE = 14.83%, and MdAPE = 9.68%; 76.34% of predictions were within 20%.
+- Random Forest performed best in the $500K–$1M band with MdAPE = 7.85%.
+- The $5M+ band was most difficult: Random Forest MdAPE reached 27.72% and showed 29.21% average underprediction across 175 sales.
+
 ## Files
 
 - `WEEK1_SETUP_AND_METADATA_NOTES.md`: brief Week 1 setup and metadata notes.
@@ -70,5 +79,7 @@ This repository contains weekly work for a housing-price prediction project usin
 - `03_baseline_model.ipynb`: Week 4 Linear Regression baseline notebook.
 - `04_model_comparison.ipynb`: Week 5–6 model comparison and feature-engineering notebook.
 - `05_advanced_models.ipynb`: Week 7 CatBoost tuning and advanced-model evaluation notebook.
+- `06_evaluation.ipynb`: Week 8 expanded overall and price-band evaluation notebook.
+- `metrics_summary.csv`: Week 8 reusable overall and price-band model metrics.
 - `data/week3_cleaned.csv`: cleaned modeling data (local only; ignored by git).
 - `data/ca_school_district_areas_2024_25.geojson`: downloaded school-district boundaries (local only; ignored by git).
